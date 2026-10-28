@@ -322,7 +322,7 @@ class _TerminalPageState extends State<TerminalPage>
                       ),
                     ],
                   ),
-                if (_session.state == LinuxEnvState.connecting)
+                if (_session.state == LinuxSessionState.connecting)
                   const LinearProgressIndicator(minHeight: 2),
                 if (_session.state == LinuxSessionState.failed)
                   MaterialBanner(

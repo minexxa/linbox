@@ -6,6 +6,7 @@ import 'package:linbox/pages/settings_page.dart';
 import 'package:linbox/pages/terminal_page.dart';
 import 'package:linbox/services/linux_env.dart';
 import 'package:linbox/services/linux_store.dart';
+import 'package:linbox/services/settings_store.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

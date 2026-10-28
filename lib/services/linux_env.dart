@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:archive/archive.dart';
 import 'package:flutter/foundation.dart';
@@ -270,7 +269,7 @@ class LinuxEnv {
     Uint8List tarBytes;
     try {
       tarBytes = xz
-          ? XzDecoder().decodeBytes(bytes)
+          ? XZDecoder().decodeBytes(bytes)
           : GZipDecoder().decodeBytes(bytes);
     } on Exception catch (e) {
       // gzip 可能不是标准头（如 alpine 用的 gzip 变体），尝试 toybox 管道。
@@ -389,14 +388,6 @@ class LinuxEnv {
       bytes[2] == 0x7a &&
       bytes[3] == 0x5a &&
       bytes[4] == 0x00;
-
-  static String _normalize(String name) {
-    var n = name;
-    if (n.startsWith('./')) n = n.substring(2);
-    while (n.startsWith('/')) n = n.substring(1);
-    if (n.isEmpty || n.contains('..')) return '';
-    return n;
-  }
 }
 
 String _humanBytes(int bytes) {

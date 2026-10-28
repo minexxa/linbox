@@ -159,9 +159,9 @@ class _LinuxEditPageState extends State<LinuxEditPage> {
             const SizedBox(height: 16),
             DropdownButtonFormField<Mirror>(
               value: _mirror,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: _flavor.supportsRootfsMirror ? '镜像' : '软件源',
-                border: OutlineInputBorder(),
+                border: const OutlineInputBorder(),
               ),
               items: [
                 for (final m in _flavor.mirrors)
