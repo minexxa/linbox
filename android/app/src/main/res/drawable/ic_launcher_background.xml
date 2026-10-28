@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 夜空 -->
+    <path
+        android:fillColor="#0A1128"
+        android:pathData="M0,0h108v108h-108z"/>
+    <!-- 星点 -->
+    <path
+        android:fillColor="#B3FFFFFF"
+        android:pathData="M20,12.9a1.1,1.1 0,1 0,0 2.2a1.1,1.1 0,1 0,0 -2.2z"/>
+    <path
+        android:fillColor="#CCFFFFFF"
+        android:pathData="M88,8.6a1.4,1.4 0,1 0,0 2.8a1.4,1.4 0,1 0,0 -2.8z"/>
+    <path
+        android:fillColor="#80FFFFFF"
+        android:pathData="M64,93a1,1 0,1 0,0 2a1,1 0,1 0,0 -2z"/>
+    <path
+        android:fillColor="#99FFFFFF"
+        android:pathData="M14,90.8a1.2,1.2 0,1 0,0 2.4a1.2,1.2 0,1 0,0 -2.4z"/>
+    <path
+        android:fillColor="#80FFFFFF"
+        android:pathData="M96,87a1,1 0,1 0,0 2a1,1 0,1 0,0 -2z"/>
+    <!-- 极光：紫（后） -->
+    <path
+        android:fillColor="#997C5CFF"
+        android:pathData="M0,52C20,30 40,66 62,40S96,22 108,34L108,64C92,54 76,76 58,60S20,84 0,70Z"/>
+    <!-- 极光：青（中） -->
+    <path
+        android:fillColor="#BF22C3E6"
+        android:pathData="M0,44C22,24 42,58 64,34S94,18 108,26L108,52C92,44 76,66 58,50S22,72 0,60Z"/>
+    <!-- 极光：绿（前） -->
+    <path
+        android:fillColor="#F234F0A8"
+        android:pathData="M0,36C24,18 44,48 66,26S96,12 108,18L108,36C94,30 78,52 60,38S24,58 0,46Z"/>
+</vector>

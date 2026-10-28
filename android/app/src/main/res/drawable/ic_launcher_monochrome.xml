@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 主题图标（Android 13+）：系统会按壁纸取色 -->
+    <path
+        android:pathData="M32,40L50,56L32,72M56,73L76,73"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:pathData="M0,36C24,18 44,48 66,26S96,12 108,18L108,26C94,22 78,44 60,30S24,50 0,38Z"
+        android:fillColor="#FFFFFF"/>
+</vector>

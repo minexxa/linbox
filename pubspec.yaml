@@ -1,0 +1,30 @@
+name: linbox
+description: Linbox — run Alpine / Ubuntu / Debian Linux on Android via proot.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  # 本地修改版 xterm（与 server_box 一致，支持选区手柄等）
+  xterm:
+    path: packages/xterm
+  shared_preferences: ^2.3.3
+  uuid: ^4.5.1
+  path_provider: ^2.1.5
+  # 与应用私有目录里的 rootfs 交互需要真正的伪终端
+  flutter_pty: ^0.4.2
+  # 统一解压 gz / xz 格式的 rootfs（Debian 为 xz）
+  archive: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

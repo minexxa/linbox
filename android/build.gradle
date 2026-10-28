@@ -1,0 +1,46 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+
+// Align plugin modules with app: compileSdk 36 + JVM 17
+subprojects { project ->
+    project.afterEvaluate {
+        if (project.hasProperty("android")) {
+            try {
+                project.android {
+                    if (it.hasProperty("compileSdk")) {
+                        compileSdk = 36
+                    }
+                    if (it.hasProperty("compileSdkVersion")) {
+                        compileSdkVersion 36
+                    }
+                    compileOptions {
+                        sourceCompatibility JavaVersion.VERSION_17
+                        targetCompatibility JavaVersion.VERSION_17
+                    }
+                }
+            } catch (Throwable ignored) {
+            }
+        }
+
+        // Kotlin tasks in plugins may still default to JVM 11
+        project.tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+            kotlinOptions {
+                jvmTarget = JavaVersion.VERSION_17.toString()
+            }
+        }
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
